@@ -1,4 +1,4 @@
-# Thermal and warpage aware chiplet floorplanning with a GPU evolutionary optimizer
+# Thermal and warpage aware chiplet floorplanning with an evolutionary optimizer
 
 Companion material for the experiments section of the paper: animations of the optimizer runs, figures, and result tables.
 
