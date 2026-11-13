@@ -131,7 +131,7 @@ Because raw placement coordinates are rarely distributed alongside published 2.5
 
 ### Extraction Validation Overlays
 
-#### Case 1 Overlays (Multi-GPU - 10 floorplans)**:
+#### Case 1 Overlays (Multi-GPU - 10 floorplans)
   ![Case 1 Extraction Overlays](assets/case1_overlay.png)
 #### Case 2 Overlays (Huawei Ascend 910 - 7 floorplans):
   ![Case 2 Extraction Overlays](assets/case2_overlay.png)
