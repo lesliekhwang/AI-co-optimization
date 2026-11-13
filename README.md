@@ -126,7 +126,7 @@ Because raw placement coordinates are rarely distributed alongside published 2.5
 
 #### Digitization Workflow
 1. **Figure Cropping & Interposer Calibration**: Each published floorplan image was cropped tightly to the interposer boundary setting the bottom-left corner as the `(0, 0)` origin, and mapped to its reported physical interposer dimensions to compute exact pixel-to-millimeter conversion ratios (`px/mm`).
-2. **Chiplet Bounding Box Annotation**: Using each chiplet's known physical footprint (`dim` in mm) from the benchmark specification (`Case1`, `Case2`, `Case3`), the bottom-left `(x_min, y_min)` and top-right `(x_max, y_max)` coordinates of every die were manually aligned and recorded over the source figure.
+2. **Chiplet Bounding Box Annotation**: Using each chiplet's known physical footprint from the benchmark specification (`Case1`, `Case2`, `Case3`), the bottom-left `(x_min, y_min)` and top-right `(x_max, y_max)` coordinates of every die were manually aligned and recorded over the source figure.
 3. **Adjacency & Orientation Verification**: Chiplet identities, rotations, topology, and connectivity were cross-checked against each benchmark's adjacency graph to ensure accurate die labeling.
 4. **Visual Overlay Validation**: Every digitized placement was rendered on top of its grayscaled original source figure with dashed bounding boxes, corner coordinate callouts, and interconnect lines to verify sub-millimeter visual alignment across all three benchmark cases.
 
