@@ -89,3 +89,47 @@ The next figure compares one reference floorplan per case with the balanced floo
 The shift from each reference floorplan to its balanced floorplan, for all 43 references:
 
 <p align="center"><img src="assets/fig_ansys_shift.png" width="80%" alt="Arrows from each reference floorplan to its balanced floorplan in two objective planes"></p>
+
+## Baseline Dataset Distribution
+
+### Method Representation in Baseline Dataset
+![Method Representation in Baseline Dataset](assets/Method%20Representation%20in%20Baseline%20Dataset.png)
+
+Breakdown of placement methods represented across the 42 baseline benchmark samples:
+* **TAP25DYS**: 17 samples (40.5%)
+* **ATPLC25D**: 4 samples (9.5%)
+* **CP25DSPT / FTACPSUR / RLPLANNR / STAMP25D**: 3 samples each (7.1% each)
+* **ATMPLACE / CGFMRL25 / TACPLACE / TDPNAVPL**: 2 samples each (4.8% each)
+* **FAPLACE2**: 1 sample (2.4%)
+
+### Case Representation in Baseline Dataset
+![Case Representation in Baseline Dataset](assets/Case%20Representation%20in%20Baseline%20Dataset.png)
+
+Distribution of benchmark test cases across the dataset:
+* **Case 3 (Micro150)**: 25 samples (59.5%)
+* **Case 1 (Multi-GPU)**: 10 samples (23.8%)
+* **Case 2 (Huawei Ascend 910)**: 7 samples (16.7%)
+
+### Method and Case Representation Combination
+![Method and Case Representation Combination](assets/Method%20and%20Case%20Representation%20Combination.png)
+
+Grouped breakdown showing how each placement method is evaluated across **Case 1**, **Case 2**, and **Case 3**.
+
+---
+
+## Benchmark Case Topologies
+
+### Case 1 — Multi-GPU
+![Multi-GPU (Case 1)](assets/Multi-GPU_%28Case_1%29.png)
+
+* **Architecture**: 6-chiplet topology featuring 1 CPU (`CPU1_0`, $12 \times 12\text{ mm}$, $105\text{ W}$), 2 GPUs (`GPU_0` & `GPU_1`, $18 \times 18\text{ mm}$, $300\text{ W}$ each), and 3 HBM stacks (`HBM_0`–`HBM_2`, $8 \times 12\text{ mm}$, $25\text{ W}$ each).
+
+### Case 2 — Huawei Ascend 910
+![Huawei Ascend 910 (Case 2)](assets/Huawei_Ascend_910_%28Case_2%29.png)
+
+* **Architecture**: 6-chiplet topology centered around a central compute die (`Virtuvian_0`, $31.4 \times 14.5\text{ mm}$, $256\text{ W}$) connected to 1 I/O die (`Nimbus_0`, $10.5 \times 16\text{ mm}$, $14\text{ W}$) and 4 HBM stacks (`HBM_0`–`HBM_3`, $8 \times 12\text{ mm}$, $25\text{ W}$ each).
+
+### Case 3 — Micro150
+![Micro150 (Case 3)](assets/Micro150_%28Case_3%29.png)
+
+* **Architecture**: (a.k.a CPU-DRAM) 8-chiplet mesh topology consisting of a $2 \times 2$ CPU array (`CPU2_0`–`CPU2_3`, $8 \times 9\text{ mm}$, $150\text{ W}$ each) paired with 4 DRAM chiplets (`DRAM_0`–`DRAM_3`, $9 \times 9\text{ mm}$, $20\text{ W}$ each).
