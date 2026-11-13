@@ -96,28 +96,21 @@ The shift from each reference floorplan to its balanced floorplan, for all 43 re
 | :--- | :--- |
 | `ATMPlace_Analytical_Thermo-Mechanical-Aware_Placement_Framework_for_2.5D-IC` | `ATMPLACE` |
 | `ATPlace2.5D_Analytical_Thermal-Aware_Chiplet_Placement_Framework_for_Large-Scale_2.5D-IC` | `ATPLC25D` |
-| `A_Thermal_and_Power_Integrity_Co-Optimization_Framework_for_2.5-D_Integrated_Microsystem` | `TPIC25D` |
-| `Chiplet3D_Pin-and_Thermal-Aware_3D_Chiplet_Floorplanning_via_Convolution-Embedded_MILP` | `CHIP3DPT` |
-| `Chiplet_Placement_Order_Exploration_Based_On_Learning_to_Rank_with_Graph_Representation` | `CPOELTRG` |
 | `Connectivity-Guided_Feasibility_Masking_for_Efficient_Chiplet_Placement_in_2.5D_Packaging_via_Reinforcement_Learning` | `CGFMRL25` |
-| `Efficient_Thermal-Aware_Floor-planning_with_Bayesian_Optimization_A_Simulation-Efficient_Approach` | `ETAFPOBO` |
 | `FAPlace_Joint_Optimization_of_Chiplet_Placement_and_Interposer_Footprint_for_2.5D_Systems` | `FAPLACE2` |
 | `Fast_Thermal-Aware_Chiplet_Placement_Assisted_by_Surrogate` | `FTACPSUR` |
-| `Learning_to_Place_Chiplets_A_Multi-Objective_Reinforcement_Learning_Approach` | `LTPCMORL` |
-| `MaskPlace2.5D_Mask-guided_thermal-aware_chiplet_placement_for_large-scale_2.5D_ICs_by_reinforcement_learning` | `MASKPL25` |
 | `RLplanner_Reinforcement_Learning_based_Floorplanning_for_Chiplets_with_Fast_Thermal_Analysis` | `RLPLANNR` |
 | `STAMP-2.5D_Structural_and_Thermal_Aware_Methodology_for_Placement_in_2.5D_Integration` | `STAMP25D` |
 | `TACPlace_Ultrafast_Thermal-Aware_Chiplet_Placement_with_Feasibility_Seeking` | `TACPLACE` |
 | `TAP-2.5D_A_Thermally-Aware_Chiplet_Placement_Methodology_for_2.5D_Systems` | `TAP25DYS` |
 | `TDPNavigator-Placer_Thermal-_and_Wirelength-Aware_Chiplet_Placement_in_2.5D_Systems_Through_Multi-Agent_Reinforcement_Learning` | `TDPNAVPL` |
-| `Thermal_and_Wirelength_Co-Optimization_for_2.5D_Chiplet_Placement_Using_Region-Guided_Reinforcement_Learning` | `TWCO25RL` |
 
 ### Dataset Analytics
 
 | Method Representation | Case Representation | Method and Case Combination |
 | :---: | :---: | :---: |
 | ![Method](assets/Method%20Representation%20in%20Baseline%20Dataset.png) | ![Case](assets/Case%20Representation%20in%20Baseline%20Dataset.png) | ![Combination](assets/Method%20and%20Case%20Representation%20Combination.png) |
-| Breakdown of placement methods represented across the 42 baseline benchmark samples: <br><br> • **TAP25DYS**: 17 samples (40.5%)<br> • **ATPLC25D**: 4 samples (9.5%)<br> • **CP25DSPT / FTACPSUR / RLPLANNR / STAMP25D**: 3 samples each (7.1% each)<br> • **ATMPLACE / CGFMRL25 / TACPLACE / TDPNAVPL**: 2 samples each (4.8% each)<br> • **FAPLACE2**: 1 sample (2.4%) | Distribution of benchmark test cases across the dataset: <br><br> • **Case 3 (Micro150)**: 25 samples (59.5%)<br> • **Case 1 (Multi-GPU)**: 10 samples (23.8%)<br> • **Case 2 (Huawei Ascend 910)**: 7 samples (16.7%) | Grouped breakdown showing how each placement method is evaluated across **Case 1**, **Case 2**, and **Case 3**. |
+| Breakdown of placement methods represented across the 42 baseline benchmark samples: <br><br> • **TAP25DYS**: 17 samples (40.5%)<br> • **ATPLC25D**: 4 samples (9.5%)<br> • **CP25DSPT / FTACPSUR / RLPLANNR / STAMP25D**: 3 samples each (7.1% each)<br> • **ATMPLACE / CGFMRL25 / TACPLACE / TDPNAVPL**: 2 samples each (4.8% each)<br> • **FAPLACE2**: 1 sample (2.4%) | Distribution of benchmark test cases across the dataset: <br><br> • **Case 3 (Micro150)**: 25 samples (59.5%)<br> • **Case 1 (Multi-GPU)**: 10 samples (23.8%)<br> • **Case 2 (Huawei Ascend 910)**: 7 samples (16.7%) | Grouped breakdown showing baseline representation of each case across each method **Case 1**, **Case 2**, and **Case 3**. |
 
 ## Benchmark Case Topologies
 
@@ -138,8 +131,11 @@ Because raw placement coordinates are rarely distributed alongside published 2.5
 
 ### Extraction Validation Overlays
 
-| Case 1 Overlays (Multi-GPU — 10 layouts) | Case 2 Overlays (Huawei Ascend 910 — 7 layouts) |
-| :---: | :---: |
-| ![Case 1](assets/case1_overlay.png) | ![Case 2](assets/case2_overlay.png) |
-| **Case 3 Overlays (Micro150 — 25 layouts)** | **Case 11 Overlay** |
-| ![Case 3](assets/case3_overlay.png) | ![Case 11](assets/case11_overlay.png) |
+- **Case 1 Overlays (Multi-GPU — 10 layouts)**:
+  ![Case 1 Extraction Overlays](assets/case1_overlay.png)
+- **Case 2 Overlays (Huawei Ascend 910 — 7 layouts)**:
+  ![Case 2 Extraction Overlays](assets/case2_overlay.png)
+- **Case 3 Overlays (Micro150 — 25 layouts)**:
+  ![Case 3 Extraction Overlays](assets/case3_overlay.png)
+- **Case 11 Overlay**:
+  ![Case 11 Extraction Overlay](assets/case11_overlay.png)
