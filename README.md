@@ -98,6 +98,7 @@ The shift from each reference floorplan to its balanced floorplan, for all 43 re
 | `ATPlace2.5D_Analytical_Thermal-Aware_Chiplet_Placement_Framework_for_Large-Scale_2.5D-IC` | `ATPLC25D` |
 | `Connectivity-Guided_Feasibility_Masking_for_Efficient_Chiplet_Placement_in_2.5D_Packaging_via_Reinforcement_Learning` | `CGFMRL25` |
 | `FAPlace_Joint_Optimization_of_Chiplet_Placement_and_Interposer_Footprint_for_2.5D_Systems` | `FAPLACE2` |
+| `Chiplet_Placement_for_2.5D_IC_with_Sequence_Pair_Based_Tree_and_Thermal_Consideration`	| `CP25DSPT` |
 | `Fast_Thermal-Aware_Chiplet_Placement_Assisted_by_Surrogate` | `FTACPSUR` |
 | `RLplanner_Reinforcement_Learning_based_Floorplanning_for_Chiplets_with_Fast_Thermal_Analysis` | `RLPLANNR` |
 | `STAMP-2.5D_Structural_and_Thermal_Aware_Methodology_for_Placement_in_2.5D_Integration` | `STAMP25D` |
