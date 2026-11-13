@@ -138,5 +138,5 @@ Because raw placement coordinates are rarely distributed alongside published 2.5
   ![Case 2 Extraction Overlays](assets/case2_overlay.png)
 #### Case 3 Overlays (Micro150 - 25 floorplans)
   ![Case 3 Extraction Overlays](assets/case3_overlay.png)
-#### Case 11 Floorplan
+#### Case 11 Overlay and Floorplan
   ![Case 11 Extraction Overlay](assets/case11_overlay.png)
