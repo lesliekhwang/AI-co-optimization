@@ -112,18 +112,18 @@ The shift from each reference floorplan to its balanced floorplan, for all 43 re
 | ![Method](assets/Method%20Representation%20in%20Baseline%20Dataset.png) | ![Case](assets/Case%20Representation%20in%20Baseline%20Dataset.png) | ![Combination](assets/Method%20and%20Case%20Representation%20Combination.png) |
 | Breakdown of placement methods represented across the 42 baseline benchmark samples: <br><br> • **TAP25DYS**: 17 samples (40.5%)<br> • **ATPLC25D**: 4 samples (9.5%)<br> • **CP25DSPT / FTACPSUR / RLPLANNR / STAMP25D**: 3 samples each (7.1% each)<br> • **ATMPLACE / CGFMRL25 / TACPLACE / TDPNAVPL**: 2 samples each (4.8% each)<br> • **FAPLACE2**: 1 sample (2.4%) | Distribution of benchmark test cases across the dataset: <br><br> • **Case 3 (Micro150)**: 25 samples (59.5%)<br> • **Case 1 (Multi-GPU)**: 10 samples (23.8%)<br> • **Case 2 (Huawei Ascend 910)**: 7 samples (16.7%) | Grouped breakdown showing baseline representation of each case across each method **Case 1**, **Case 2**, and **Case 3**. |
 
-## Benchmark Case Topologies
+### Benchmark Case Topologies
 
 | Case 1 — Multi-GPU | Case 2 — Huawei Ascend 910 | Case 3 — Micro150 |
 | :---: | :---: | :---: |
 | ![Multi-GPU](assets/Multi-GPU_%28Case_1%29.png) | ![Huawei Ascend 910](assets/Huawei_Ascend_910_%28Case_2%29.png) | ![Micro150](assets/Micro150_%28Case_3%29.png) |
 | **Architecture**: 6-chiplet topology featuring 1 CPU (`CPU1_0`, $12 \times 12\text{ mm}$, $105\text{ W}$), 2 GPUs (`GPU_0` & `GPU_1`, $18 \times 18\text{ mm}$, $300\text{ W}$ each), and 3 HBM stacks (`HBM_0`–`HBM_2`, $8 \times 12\text{ mm}$, $25\text{ W}$ each). | **Architecture**: 6-chiplet topology centered around a central compute die (`Virtuvian_0`, $31.4 \times 14.5\text{ mm}$, $256\text{ W}$) connected to 1 I/O die (`Nimbus_0`, $10.5 \times 16\text{ mm}$, $14\text{ W}$) and 4 HBM stacks (`HBM_0`–`HBM_3`, $8 \times 12\text{ mm}$, $25\text{ W}$ each). | **Architecture**: (a.k.a CPU-DRAM) 8-chiplet mesh topology consisting of a $2 \times 2$ CPU array (`CPU2_0`–`CPU2_3`, $8 \times 9\text{ mm}$, $150\text{ W}$ each) paired with 4 DRAM chiplets (`DRAM_0`–`DRAM_3`, $9 \times 9\text{ mm}$, $20\text{ W}$ each). |
 
-## Manual Benchmark Extraction & Digitization Methodology
+### Manual Benchmark Extraction & Digitization Methodology
 
 Because raw placement coordinates are rarely distributed alongside published 2.5D IC placement results, all 42 baseline floorplans were manually extracted and digitized by hand from the floorplan and thermal-map figures in their respective publications.
 
-### Digitization Workflow
+#### Digitization Workflow
 1. **Figure Cropping & Interposer Calibration**: Each published floorplan image was cropped tightly to the interposer boundary—establishing the bottom-left corner as the `(0, 0)` origin—and mapped to its reported physical interposer dimensions ($W \times H$ in mm, such as $39.0 \times 39.0\text{ mm}$, $45.0 \times 45.0\text{ mm}$, or $50.0 \times 50.0\text{ mm}$) to compute exact pixel-to-millimeter conversion ratios (`px/mm`).
 2. **Chiplet Bounding Box Annotation**: Using each chiplet's known physical footprint (`dim` in mm) from the benchmark specification (`Case1`, `Case2`, `Case3`), the bottom-left `(x_min, y_min)` and top-right `(x_max, y_max)` coordinates of every die were manually aligned and recorded over the source figure.
 3. **Adjacency & Orientation Verification**: Chiplet identities, rotations, topology, and connectivity were cross-checked against each benchmark's adjacency graph to ensure accurate die labeling.
@@ -131,11 +131,11 @@ Because raw placement coordinates are rarely distributed alongside published 2.5
 
 ### Extraction Validation Overlays
 
-- **Case 1 Overlays (Multi-GPU — 10 layouts)**:
+#### Case 1 Overlays (Multi-GPU - 10 floorplans)**:
   ![Case 1 Extraction Overlays](assets/case1_overlay.png)
-- **Case 2 Overlays (Huawei Ascend 910 — 7 layouts)**:
+#### Case 2 Overlays (Huawei Ascend 910 - 7 floorplans):
   ![Case 2 Extraction Overlays](assets/case2_overlay.png)
-- **Case 3 Overlays (Micro150 — 25 layouts)**:
+#### Case 3 Overlays (Micro150 - 25 floorplans)
   ![Case 3 Extraction Overlays](assets/case3_overlay.png)
-- **Case 11 Overlay**:
+#### Case 11 Floorplan
   ![Case 11 Extraction Overlay](assets/case11_overlay.png)
