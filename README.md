@@ -156,7 +156,7 @@ Grouped breakdown showing baseline representation of each case across each metho
 
 ### Manual Benchmark Extraction & Digitization Methodology
 
-Because raw placement coordinates are rarely distributed alongside published 2.5D IC placement results, all 42 baseline floorplans were manually extracted and digitized by hand from the floorplan and thermal-map figures in their respective publications.
+Because raw placement coordinates are rarely distributed alongside published 2.5D IC placement results, all 42 baseline floorplans were manually extracted by hand from the floorplan and thermal-map figures in their respective publications.
 
 #### Digitization Workflow
 1. **Figure Cropping & Interposer Calibration**: Each published floorplan image was cropped tightly to the interposer boundary setting the bottom-left corner as the `(0, 0)` origin, and mapped to its reported physical interposer dimensions to compute exact pixel-to-millimeter conversion ratios (`px/mm`).
