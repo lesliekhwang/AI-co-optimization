@@ -146,9 +146,16 @@ Distribution of benchmark test cases across the dataset:
 Grouped breakdown showing baseline representation of each case across each method **Case 1**, **Case 2**, and **Case 3**.
 ### Benchmark Case Topologies
 
-![Multi-GPU](assets/Multi-GPU_%28Case_1%29.png) ![Huawei Ascend 910](assets/Huawei_Ascend_910_%28Case_2%29.png) ![Micro150](assets/Micro150_%28Case_3%29.png)
+<p align="center">
+  <img src="assets/Multi-GPU_%28Case_1%29.png" width="32%" alt="Multi-GPU" />
+  <img src="assets/Huawei_Ascend_910_%28Case_2%29.png" width="32%" alt="Huawei Ascend 910" />
+  <img src="assets/Micro150_%28Case_3%29.png" width="32%" alt="Micro150" />
+</p>
 
-**Case 1 (Multi-GPU)** uses a 6-chiplet topology featuring 1 CPU (CPU1_0, 12 x 12 mm, 105 W), 2 GPUs (GPU_0 & GPU_1, 18 x 18 mm, 300 W each), and 3 HBM stacks (HBM_0–HBM_2, 8 x 12 mm, 25 W each). **Case 2 (Huawei Ascend 910)** has a 6-chiplet topology centered around a central compute die (Virtuvian_0, 31.4 x 14.5 mm, 256 W) connected to 1 I/O die (Nimbus_0, 10.5 x 16 mm, 14 W) and 4 HBM stacks (HBM_0–HBM_3, 8 x 12 mm, 25 W each). **Case 3 (Micro150)** (also known as CPU-DRAM) features an 8-chiplet mesh topology consisting of a 2 x 2 CPU array (CPU2_0–CPU2_3, 8 x 9 mm, 150 W each) paired with 4 DRAM chiplets (DRAM_0–DRAM_3, 9 x 9 mm, 20 W each).
+* **Case 1 (Multi-GPU)**: Uses a 6-chiplet topology featuring 1 CPU (CPU1_0, 12 x 12 mm, 105 W), 2 GPUs (GPU_0 & GPU_1, 18 x 18 mm, 300 W each), and 3 HBM stacks (HBM_0–HBM_2, 8 x 12 mm, 25 W each).
+* **Case 2 (Huawei Ascend 910)**: Has a 6-chiplet topology centered around a central compute die (Virtuvian_0, 31.4 x 14.5 mm, 256 W) connected to 1 I/O die (Nimbus_0, 10.5 x 16 mm, 14 W) and 4 HBM stacks (HBM_0–HBM_3, 8 x 12 mm, 25 W each).
+* **Case 3 (Micro150)**: (Also known as CPU-DRAM) features an 8-chiplet mesh topology consisting of a 2 x 2 CPU array (CPU2_0–CPU2_3, 8 x 9 mm, 150 W each) paired with 4 DRAM chiplets (DRAM_0–DRAM_3, 9 x 9 mm, 20 W each).
+
 ### Manual Benchmark Extraction & Digitization Methodology
 
 Because raw placement coordinates are rarely distributed alongside published 2.5D IC placement results, all 42 baseline floorplans were manually extracted and digitized by hand from the floorplan and thermal-map figures in their respective publications.
